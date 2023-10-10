@@ -1,45 +1,32 @@
-#This is sample project
-To use @Autowired in a Spring Boot application, you need to annotate the field with the @Autowired annotation. The field will then be automatically injected with an instance of the class that implements the interface or annotated with @Component. For example, if you have a field of type `UserRepository` in your `Application` class, you can annotate it with @Autowired like this:
+Hyderabadi biryani is a dish of rice, meat, and spices that is popular in Hyderabad, India. It is made with basmati rice, goat or chicken, and a mixture of spices, including turmeric, coriander, cumin, garam masala, and saffron. The rice is cooked separately from the meat, and then they are layered together in a pot and cooked over a low heat. Hyderabadi biryani is often served with raita, a yogurt-based condiment.
 
-```
-@Autowired
-private UserRepository userRepository;
-```
+Here is a recipe for Hyderabadi biryani:
 
-Spring Boot will then automatically inject an instance of a `UserRepository` implementation into your `Application` class.
+Ingredients:
 
-You can also use @Autowired to inject dependencies into constructors. For example, if you have a class that has a constructor that takes a `UserRepository` as a parameter, you can annotate the constructor with @Autowired like this:
+* 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces
+* 1/2 cup plain yogurt
+* 1 tablespoon lemon juice
+* 1 tablespoon ginger-garlic paste
+* 1 tablespoon ground turmeric
+* 1 tablespoon ground coriander
+* 1 tablespoon ground cumin
+* 1 teaspoon garam masala
+* 1/2 teaspoon cayenne pepper
+* 1/2 teaspoon salt
+* 1/4 cup vegetable oil
+* 1 onion, finely chopped
+* 1 cup basmati rice, rinsed and drained
+* 1/2 cup chopped cilantro
+* 1/4 cup chopped mint
+* 1/4 cup chopped cashews
+* 1/4 cup raisins
 
-```
-public class UserService {
+Instructions:
 
-    @Autowired
-    private UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-}
-```
-
-Spring Boot will then automatically inject an instance of a `UserRepository` implementation into the constructor of the `UserService` class.
-
-You can also use @Autowired to inject dependencies into properties. For example, if you have a class that has a property of type `UserRepository`, you can annotate the property with @Autowired like this:
-
-```
-public class UserService {
-
-    private UserRepository userRepository;
-
-    @Autowired
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-}
-```
-
-Spring Boot will then automatically inject an instance of a `UserRepository` implementation into the `userRepository` property of the `UserService` class.
-
-@Autowired is a powerful annotation that can be used to inject dependencies into Spring Boot applications. By using @Autowired, you can reduce the amount of code that you need to write and make your code more reusable.
+1. In a large bowl, combine the chicken, yogurt, lemon juice, ginger-garlic paste, turmeric, coriander, cumin, garam masala, cayenne pepper, and salt. Mix well to coat the chicken. Cover and refrigerate for at least 30 minutes, or overnight.
+2. In a large skillet, heat the oil over medium heat. Add the onion and cook until softened, about 5 minutes. Add the chicken and marinade and cook, stirring occasionally, until the chicken is cooked through, about 10 minutes.
+3. Meanwhile, in a medium saucepan, bring 3 cups of water to a boil. Add the rice and cook for 5 minutes, or until the rice is almost tender. Drain the rice and set aside.
+4. In a large pot, combine the chicken, rice, cilantro, mint, cashews, and raisins. Mix well to combine.
+5. Bring the pot to a boil over medium heat. Reduce the heat to low, cover, and simmer for 20 minutes, or until the rice is cooked through and the chicken is tender.
+6. Remove the pot from the heat and let stand for 5 minutes before serving.
