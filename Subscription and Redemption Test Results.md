@@ -425,7 +425,7 @@ Other tables are in same state as in Consolidation initiate
 |ALPACASECUAKASIAFIRM|ALPACASECU|yes|USD|50366.67|50366.67|AKASIAFIRM|ACTIVE|aa98cfeb-6f82-3fe1-8e6e-56c909b7d984|3497547SW||50366.67|
 |ALPACASECU1046500003|ALPACASECU|no|USD|529.27|262.6|1046500003|ACTIVE|5524f986-4a70-4d06-9864-4d6700c4dd6e|351383055||262.6|
 
-		 Order
+		 Orders
 
 |order_id|security_id|order_type|order_context|order_date|order_currency_id|order_amt|investment_account_id|customer_id|goal_id|goal_transaction_id|broker_id|broker_ref|status|order_qty|filled_date|settled_date|
 |--------|-----------|----------|-------------|----------|-----------------|---------|---------------------|-----------|-------|-------------------|---------|----------|------|---------|-----------|------------|
@@ -448,3 +448,26 @@ Other tables are in same state as in Consolidation initiate
 
 #### Status
 
+		 Investment Stock Entry
+
+|entry_id|investment_account_id|customer_id|goal_id|security_id|goal_transaction_id|queued_date|posting_date|posting_type|posting_qty|status|posting_desc|order_id|
+|--------|---------------------|-----------|-------|-----------|-------------------|-----------|------------|------------|-----------|------|------------|--------|
+|INSE00000121|ALPACASECU1046500003|1046500003|GOAL00000003|BBSC|TRAN00000101||2023-12-19 07:26:09.000|INWARD|0.878872775|POSTED||ORDR00000121|
+|INSE00000122|ALPACASECU1046500003|1046500003|GOAL00000003|CHIE|TRAN00000101||2023-12-19 07:26:10.000|INWARD|4.784688995|POSTED||ORDR00000122|
+|INSE00000123|ALPACASECU1046500003|1046500003|GOAL00000003|CUT|TRAN00000101||2023-12-19 07:26:11.000|INWARD|4.138423339|POSTED||ORDR00000123|
+
+		 Goal Position
+
+|goal_position_id|investment_account_id|security_id|customer_id|goal_id|balance_qty|available_qty|current_price|broker_id|
+|----------------|---------------------|-----------|-----------|-------|-----------|-------------|-------------|---------|
+|GOAL00000003BBSC|ALPACASECU1046500003|BBSC|1046500003|GOAL00000003|0.878872775|0|60.68||
+|GOAL00000003CHIE|ALPACASECU1046500003|CHIE|1046500003|GOAL00000003|4.784688995|0|16.72||
+|GOAL00000003CUT|ALPACASECU1046500003|CUT|1046500003|GOAL00000003|4.138423339|0|32.22||
+
+		 Investment Account Position
+
+|investment_position_id|investment_account_id|security_id|customer_id|balance_qty|available_qty|current_price|broker_balance_qty|broker_id|
+|----------------------|---------------------|-----------|-----------|-----------|-------------|-------------|------------------|---------|
+|ALPACASECU1046500003BBSC|ALPACASECU1046500003|BBSC|1046500003|0.878872775|0|0|0||
+|ALPACASECU1046500003CHIE|ALPACASECU1046500003|CHIE|1046500003|4.784688995|0|0|0||
+|ALPACASECU1046500003CUT|ALPACASECU1046500003|CUT|1046500003|4.138423339|0|0|0||
